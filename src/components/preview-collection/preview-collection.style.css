@@ -1,3 +1,7 @@
+.shop-page {
+  padding: 20px 60px;
+}
+
 .collection-preview {
   display: flex;
   flex-direction: column;
