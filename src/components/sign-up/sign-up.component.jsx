@@ -25,6 +25,7 @@ class SignUpComponent extends React.Component {
         }
         try {
             const { user } = await auth.createUserWithEmailAndPassword(email, password);
+            console.log('FROM SUBMIT' + user)
             await createUserProfileDocument(user, {displayName});
             this.setState({
                 displayName: '',
@@ -35,10 +36,12 @@ class SignUpComponent extends React.Component {
         } catch (e) {
             console.error(e);
         }
+        console.log(this.state)
     }
 
     handleChange = event => {
         const {name, value} = event.target;
+        console.log(event.target)
         this.setState({ [name]: value });
 
     }
@@ -49,7 +52,7 @@ class SignUpComponent extends React.Component {
             <div className='sign-up-component'>
                 <h2 className='title'>I do not have an account</h2>
                 <span>Sign up with your email and password</span>
-                <form className='sign-up-form' onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className='sign-up-form'>
                     <FormInput
                         type='text'
                         name='displayName'
@@ -60,7 +63,7 @@ class SignUpComponent extends React.Component {
                     />
                     <FormInput
                         type='email'
-                        name='Email'
+                        name='email'
                         value={email}
                         onChange={this.handleChange}
                         label='email'
@@ -82,7 +85,7 @@ class SignUpComponent extends React.Component {
                         label='Confirm password'
                         requaired='true'
                     />
-                    <CustomButton type='submit'>Sign Up</CustomButton>
+                    <CustomButton type="submit">Sign Up</CustomButton>
                 </form>
             </div>
         )
