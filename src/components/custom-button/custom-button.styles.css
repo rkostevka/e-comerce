@@ -13,6 +13,8 @@
   font-weight: bolder;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
 }
 .custom-button:hover {
   background-color: white;
@@ -26,6 +28,17 @@
 .custom-button.google-sign-in:hover {
   background: #357ae8;
   outline: none;
+}
+.custom-button.inverted {
+  background-color: black;
+  color: white;
+  outline: 1px solid white;
+}
+.custom-button.inverted:hover {
+  background-color: white;
+  color: black;
+  outline: 1px solid black;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=custom-button.styles.css.map */
