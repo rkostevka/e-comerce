@@ -32,12 +32,12 @@
     }
   }
   &.inverted {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     outline: 1px solid white;
     &:hover {
-      background-color: white;
-      color: black;
+      background-color: black;
+      color: white;
       outline: 1px solid black;
       cursor: pointer;
     }
