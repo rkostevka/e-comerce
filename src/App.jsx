@@ -12,6 +12,7 @@ import {setCurrentUser} from "./redux/user/user-actions";
 import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
 import {selectCurrentUser} from "./redux/user/user-selectors";
+import CheckoutPage from "./pages/checkout/ckeckout.component";
 
 
 class App extends React.Component {
@@ -45,6 +46,7 @@ class App extends React.Component {
                 <Routes>
                     <Route exact path='/' element={<HomePage/>} />
                     <Route path='/shop' element={<ShopPage/>} />
+                    <Route exact path='/checkout' element={<CheckoutPage/>} />
                     <Route
                         exact
                         path='/sign-in'
