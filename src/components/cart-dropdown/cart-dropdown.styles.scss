@@ -11,6 +11,11 @@
   right: 40px;
   z-index: 5;
 
+  .checkout-button {
+    display: block;
+    margin-top: 5px;
+  }
+
   .cart-items {
     height: 240px;
     display: flex;

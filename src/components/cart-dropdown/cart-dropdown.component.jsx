@@ -21,7 +21,7 @@ const CartDropDown = ({ cartItems }) => {
 
                 }
             </div>
-            <NavLink to={`/checkout`}>
+            <NavLink to={`/checkout`} className='checkout-button'>
                 <CustomButton>Go to checkout</CustomButton>
             </NavLink>
         </div>
