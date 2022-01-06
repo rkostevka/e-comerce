@@ -7,8 +7,9 @@ import CartItem from "../cart-item/cart-item.componetn";
 import {selectCartItems} from "../../redux/cart/cart-selectors";
 import {createStructuredSelector} from "reselect";
 import {NavLink} from "react-router-dom";
+import {toggleCartHidden} from "../../redux/cart/cart-actions";
 
-const CartDropDown = ({ cartItems }) => {
+const CartDropDown = ({ cartItems, dispatch }) => {
     return (
         <div className='cart-dropdown'>
             <div className='cart-items'>
@@ -22,7 +23,7 @@ const CartDropDown = ({ cartItems }) => {
                 }
             </div>
             <NavLink to={`/checkout`} className='checkout-button'>
-                <CustomButton>Go to checkout</CustomButton>
+                <CustomButton onClick={() => dispatch(toggleCartHidden())}>Go to checkout</CustomButton>
             </NavLink>
         </div>
     );
